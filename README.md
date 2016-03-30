@@ -1,4 +1,7 @@
 React Router Docs
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+
 ===
 
 **Note: This is work in progress. Please use the [main docs](https://github.com/reactjs/react-router/tree/master/docs) as this ones can contain mistakes. At some point once we feel that these docs are good I'd like them to be merged to the main repo. Feel free to contribute, point out mistakes and things which the docs are lacking.**
@@ -37,3 +40,15 @@ To be very productive I switched off GH issues. As I said I'm experimenting here
 
 
 Here is a longer explanation: https://gist.github.com/ryanflorence/8a62abea562ca2896dee
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [![Mateusz Zatorski](https://avatars.githubusercontent.com/u/3802023?v=3&s=100)<br /><sub>Mateusz Zatorski</sub>](https://twitter.com/matzatorski)<br />[📖](https://github.com/knowbody/react-router-docs/commits?author=knowbody) | [![Kent C. Dodds](https://avatars.githubusercontent.com/u/1500684?v=3&s=100)<br /><sub>Kent C. Dodds</sub>](http://kent.doddsfamily.us)<br />[📖](https://github.com/knowbody/react-router-docs/commits?author=kentcdodds) |
+| :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.
+Contributions of any kind welcome!

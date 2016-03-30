@@ -1,0 +1,24 @@
+{
+  "name": "react-router-docs",
+  "version": "0.0.1",
+  "description": "Rewrite of the React Router docs - work in progress",
+  "author": "Mateusz Zatorski <mateuszzatorski@gmail.com> (https://github.com/knowbody)",
+  "private": true,
+  "main": "README.md",
+  "scripts": {
+    "add-contributor": "all-contributors add",
+    "update-contributors": "all-contributors generate"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knowbody/react-router-docs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knowbody/react-router-docs.git"
+  },
+  "homepage": "https://github.com/knowbody/react-router-docs",
+  "devDependencies": {
+    "all-contributors-cli": "2.0.0-beta8"
+  }
+}
