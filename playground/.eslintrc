@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "react/prefer-stateless-function": 1,
+    "no-use-before-define": 1,
+  },
+  "extends": "airbnb"
+}
