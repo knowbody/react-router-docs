@@ -1,0 +1,28 @@
+{
+  "projectName": "react-router-docs",
+  "projectOwner": "knowbody",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "contributors": [
+    {
+      "login": "knowbody",
+      "name": "Mateusz Zatorski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3802023?v=3",
+      "profile": "https://twitter.com/matzatorski",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kentcdodds",
+      "name": "Kent C. Dodds",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1500684?v=3",
+      "profile": "http://kent.doddsfamily.us",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ]
+}
