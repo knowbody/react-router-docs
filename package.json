@@ -1,0 +1,31 @@
+{
+  "name": "react-router-docs",
+  "version": "1.0.0",
+  "description": "React Router Docs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:clean": "rimraf docs/_book",
+    "docs:prepare": "gitbook install",
+    "docs:build": "npm run docs:prepare && gitbook build -g knowbody/react-router-docs",
+    "docs:watch": "npm run docs:prepare && gitbook serve",
+    "docs:publish": "npm run docs:clean && npm run docs:build && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:knowbody/react-router-docs gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knowbody/react-router-docs.git"
+  },
+  "keywords": [],
+  "author": "Mateusz Zatorski <mateuszzatorski@gmail.com> (https://github.com/knowbody)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knowbody/react-router-docs/issues"
+  },
+  "homepage": "https://github.com/knowbody/react-router-docs#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.1.2",
+    "rimraf": "^2.5.2"
+  }
+}
