@@ -1,12 +1,7 @@
 # Table of Contents
 
-### Getting started
-
 * [React Router Documentation](README.md)
 * [What React Router is/isn't](About.md)
-
-### API Reference
-
 * [API Reference](/api/README.md)
   * [Components]()
     * [`<Router>`](/api/Router.md)
