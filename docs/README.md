@@ -8,6 +8,11 @@ Once the docs are good enough they might be merged in to the main React Router r
 
 ### These docs cover React Router v2.x.x
 
+## There will be live examples
+
+[source code](https://jsfiddle.net/knowbody/6ou1kcdw/2/)
+
+
 ## About
 
 React Router is a powerful routing library built on top of [React](https://facebook.github.io/react/) that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.

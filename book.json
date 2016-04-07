@@ -1,7 +1,15 @@
 {
   "gitbook": "3.0.0-pre.5",
   "root": "./docs",
-  "plugins": ["prism", "-highlight", "theme-official", "edit-link", "github"],
+  "plugins": [
+    "prism",
+    "-highlight",
+    "theme-official",
+    "edit-link",
+    "github",
+    "anker-enable",
+    "jsfiddle"
+  ],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/knowbody/react-router-docs/tree/master/docs",
@@ -9,6 +17,12 @@
     },
     "github": {
       "url": "https://github.com/knowbody/react-router-docs/tree/master/docs"
+    },
+    "jsfiddle":{
+      "type": "frame",
+      "tabs": ["result","js","css", "html"],
+      "height": "500",
+      "width": "100%"
     }
   }
 }
