@@ -2,13 +2,15 @@
 
 * [React Router Documentation](README.md)
 * [What React Router is/isn't](About.md)
+* Examples
+  * [Client side "404 not found"](/examples/NotFound.md)
 * [API Reference](/api/README.md)
   * Components
     * [`<Router>`](/api/Router.md)
     * [`<Link>`](/api/Link.md)
     * [`<IndexLink>`](/api/IndexLink.md)
     * [`<RouterContext>`](/api/RouterContext.md)
-      * [`context.router`](/api/RouterContext.md#contextrouter) 
+      * [`context.router`](/api/RouterContext.md#contextrouter)
     * [`<RoutingContext>` (deprecated)](/api/RoutingContext.md)
     * [`<Route>`](/api/Route.md)
     * [Plain Route](/api/PlainRoute.md)

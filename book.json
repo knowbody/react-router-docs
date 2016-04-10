@@ -20,7 +20,7 @@
     },
     "jsfiddle":{
       "type": "frame",
-      "tabs": ["result","js","css", "html"],
+      "tabs": ["result"],
       "height": "500",
       "width": "100%"
     }
