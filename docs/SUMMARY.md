@@ -2,8 +2,9 @@
 
 * [React Router Documentation](README.md)
 * [What React Router is/isn't](About.md)
-* Examples
-  * [Client side "404 not found"](/examples/NotFound.md)
+* Guides
+  * [Navigate Outside Components](/guides/NavigateOutsideComponents.md)
+  * [Client side "404 not found"](/guides/NotFound.md)
 * [API Reference](/api/README.md)
   * Components
     * [`<Router>`](/api/Router.md)
