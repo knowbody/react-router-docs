@@ -1,11 +1,7 @@
 # Client side "404 not found"
 
-To create a client side "404 not found" fallback all you need to do is make use of a `<Redirect />` component.
-Assuming that your application has the routes declared, first of all import a `Redirect` component:
-
-```jsx
-import { Redirect } from 'react-router';
-```
+To create a client side "404 not found" fallback all you need to do is make use of a `<Route />` component
+with a non-greedy matching path.
 
 Create your `NotFound` component, i.e. the page which will display 404 error message:
 
@@ -22,14 +18,17 @@ const NotFound = () =>
 export default NotFound;
 ```
 
-Add the created `NotFound` to your routes configuration, together with a `Redirect` component.
-Make sure that the 404 redirect is declared in the very bottom of the routes configuration,
-so it is called only if the other routes path will not get matched.
+Let's add `<NotFound />` component to routes configuration, using `*` as a value of the `path` parameter
+to get a non-greedy matching.
+
+It is important to remember that the 404 route **needs to be declared
+in the very bottom of your routes configuration**, so the `<Route />` is only mounted if any of the
+routes' path declared above are not matched:
 
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Redirect, browserHistory } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 import App from './components/App';
 import NotFound from './components/NotFound';
 
@@ -39,8 +38,7 @@ const Root = () =>
 
       {/* Your other routes here */}
 
-      <Route path="404" component={NotFound} />
-      <Redirect from="*" to="404" />
+      <Route path="*" component={NotFound} />
     </Route>
   </Router>
 
@@ -49,4 +47,4 @@ render(<Root />, document.getElementById('root'));
 
 See the live example below, try to enter some non valid url to see 404 page:
 
-[source code](https://jsfiddle.net/knowbody/ayvd71j6/)
+[source code](https://jsfiddle.net/knowbody/35bve12w/)
