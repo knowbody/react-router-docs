@@ -1,6 +1,8 @@
 React Router Docs
 ===
 
+Read the unofficial docs here : [http://knowbody.github.io/react-router-docs/](http://knowbody.github.io/react-router-docs/)
+
 **Note: This is work in progress. Please use the [main docs](https://github.com/reactjs/react-router/tree/master/docs) as this ones can contain mistakes. At some point once we feel that these docs are good I'd like them to be merged to the main repo. Feel free to contribute, point out mistakes and things which the docs are lacking.**
 
 *As there is quite a few talks about the docs not being very accesible this is my attempt to improve them. I will reuse some of the docs from the [main repo](https://github.com/reactjs/react-router/tree/master/docs) and also add the missing parts here.*
