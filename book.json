@@ -13,7 +13,7 @@
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/knowbody/react-router-docs/tree/master/docs",
-      "label": "Edit This Page"
+      "label": ""
     },
     "github": {
       "url": "https://github.com/knowbody/react-router-docs/tree/master/docs"
