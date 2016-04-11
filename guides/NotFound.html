@@ -1,0 +1,973 @@
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Client side &quot;404 not found&quot; · React Router</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="To create a client side &quot;404 not found&quot; fallback all you need to do is make use of a &lt;Route /&gt; component
+with a non-greedy matching path.">
+        <meta name="generator" content="GitBook 3.0.0-pre.5">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="DataFetching.html" />
+    
+    
+    <link rel="prev" href="NavigateOutsideComponents.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book"
+    data-level="2.2"
+    data-chapter-title="Client side &quot;404 not found&quot;"
+    data-filepath="guides/NotFound.md"
+    data-basepath=".."
+    data-revision="Mon Apr 11 2016 17:44:11 GMT+0100 (BST)"
+    data-innerlanguage="">
+    
+
+<div class="book-summary">
+    
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+
+            
+
+
+            
+            
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    React Router Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+                <span>
+            
+                    
+                        <b>1.</b>
+                    
+                    Introduction
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="../About.html">
+            
+                <a href="../About.html">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    What React Router is/isn&#39;t
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../HowToStart.html">
+            
+                <a href="../HowToStart.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    How to get started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+                <span>
+            
+                    
+                        <b>2.</b>
+                    
+                    Guides
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="NavigateOutsideComponents.html">
+            
+                <a href="NavigateOutsideComponents.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Navigate Outside Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="NotFound.html">
+            
+                <a href="NotFound.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Client side &quot;404 not found&quot;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="DataFetching.html">
+            
+                <a href="DataFetching.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Data Fetching (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="ServerRendering.html">
+            
+                <a href="ServerRendering.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Server Rendering (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="HashtagInUrl.html">
+            
+                <a href="HashtagInUrl.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Hashtag in the URL (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="WritingTests.html">
+            
+                <a href="WritingTests.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    Writing Tests (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="PassingPropsRouteComponent.html">
+            
+                <a href="PassingPropsRouteComponent.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    Passing props to Route component (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="CodeSplitting.html">
+            
+                <a href="CodeSplitting.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    Code Splitting (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="UsageWithWebpack.html">
+            
+                <a href="UsageWithWebpack.html">
+            
+                    
+                        <b>2.9.</b>
+                    
+                    Usage with Webpack (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="UsageWithRedux.html">
+            
+                <a href="UsageWithRedux.html">
+            
+                    
+                        <b>2.10.</b>
+                    
+                    Usage with Redux (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="UsageWithRelay.html">
+            
+                <a href="UsageWithRelay.html">
+            
+                    
+                        <b>2.11.</b>
+                    
+                    Usage with Relay (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="UsageWithFlux.html">
+            
+                <a href="UsageWithFlux.html">
+            
+                    
+                        <b>2.12.</b>
+                    
+                    Usage with Flux (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="NamedComponents.html">
+            
+                <a href="NamedComponents.html">
+            
+                    
+                        <b>2.13.</b>
+                    
+                    Named Components (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="RouteTransitions.html">
+            
+                <a href="RouteTransitions.html">
+            
+                    
+                        <b>2.14.</b>
+                    
+                    Route Transitions (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="ExampleApp.html">
+            
+                <a href="ExampleApp.html">
+            
+                    
+                        <b>2.15.</b>
+                    
+                    Building an app with Router (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../Histories.html">
+            
+                <a href="../Histories.html">
+            
+                    
+                        <b>3.</b>
+                    
+                    Histories (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../api/">
+            
+                <a href="../api/">
+            
+                    
+                        <b>4.</b>
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Components
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../api/Router.html">
+            
+                <a href="../api/Router.html">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    &lt;Router&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../api/Link.html">
+            
+                <a href="../api/Link.html">
+            
+                    
+                        <b>4.1.2.</b>
+                    
+                    &lt;Link&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../api/IndexLink.html">
+            
+                <a href="../api/IndexLink.html">
+            
+                    
+                        <b>4.1.3.</b>
+                    
+                    &lt;IndexLink&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../api/RouterContext.html">
+            
+                <a href="../api/RouterContext.html">
+            
+                    
+                        <b>4.1.4.</b>
+                    
+                    &lt;RouterContext&gt;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.1" data-path="../api/RouterContext.html">
+            
+                <a href="../api/RouterContext.html#contextrouter">
+            
+                    
+                        <b>4.1.4.1.</b>
+                    
+                    context.router
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../api/RoutingContext.html">
+            
+                <a href="../api/RoutingContext.html">
+            
+                    
+                        <b>4.1.5.</b>
+                    
+                    &lt;RoutingContext&gt; (deprecated)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../api/Route.html">
+            
+                <a href="../api/Route.html">
+            
+                    
+                        <b>4.1.6.</b>
+                    
+                    &lt;Route&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../api/PlainRoute.html">
+            
+                <a href="../api/PlainRoute.html">
+            
+                    
+                        <b>4.1.7.</b>
+                    
+                    Plain Route
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../api/Redirect.html">
+            
+                <a href="../api/Redirect.html">
+            
+                    
+                        <b>4.1.8.</b>
+                    
+                    &lt;Redirect&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../api/IndexRoute.html">
+            
+                <a href="../api/IndexRoute.html">
+            
+                    
+                        <b>4.1.9.</b>
+                    
+                    &lt;IndexRoute&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../api/IndexRedirect.html">
+            
+                <a href="../api/IndexRedirect.html">
+            
+                    
+                        <b>4.1.10.</b>
+                    
+                    &lt;IndexRedirect&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../api/RouteComponents.html">
+            
+                <a href="../api/RouteComponents.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Route Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../api/Histories.html">
+            
+                <a href="../api/Histories.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Histories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <span>
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Utilities
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../api/match.html">
+            
+                <a href="../api/match.html">
+            
+                    
+                        <b>4.4.1.</b>
+                    
+                    match()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../api/createRoutes.html">
+            
+                <a href="../api/createRoutes.html">
+            
+                    
+                        <b>4.4.2.</b>
+                    
+                    createRoutes()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="../api/PropTypes.html">
+            
+                <a href="../api/PropTypes.html">
+            
+                    
+                        <b>4.4.3.</b>
+                    
+                    PropTypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.4" data-path="../api/useRoutes.html">
+            
+                <a href="../api/useRoutes.html">
+            
+                    
+                        <b>4.4.4.</b>
+                    
+                    useRoutes (deprecated)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../api/Mixins.html">
+            
+                <a href="../api/Mixins.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Mixins (deprecated)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../StackOverflowQuestions.html">
+            
+                <a href="../StackOverflowQuestions.html">
+            
+                    
+                        <b>5.</b>
+                    
+                    StackOverflow Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../GLOSSARY.html">
+            
+                <a href="../GLOSSARY.html">
+            
+                    
+                        <b>6.</b>
+                    
+                    Glossary (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../Troubleshooting.html">
+            
+                <a href="../Troubleshooting.html">
+            
+                    
+                        <b>7.</b>
+                    
+                    Troubleshooting (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../FAQ.html">
+            
+                <a href="../FAQ.html">
+            
+                    
+                        <b>8.</b>
+                    
+                    FAQ (todo)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../Feedback.html">
+            
+                <a href="../Feedback.html">
+            
+                    
+                        <b>9.</b>
+                    
+                    Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            <li class="divider"></li>
+            
+
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+</div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+<div class="book-header" role="navigation">
+    
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Client side &quot;404 not found&quot;</a>
+    </h1>
+</div>
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <section class="normal markdown-section">
+                            
+                            <h1 id="client-side-404-not-found">Client side &quot;404 not found&quot;</h1>
+<p>To create a client side &quot;404 not found&quot; fallback all you need to do is make use of a <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token punctuation">/&gt;</span></span></code> component
+with a non-greedy matching path.</p>
+<p>Create your <code>NotFound</code> component, i.e. the page which will display 404 error message:</p>
+<pre><code class="lang-jsx"><span class="token comment" spellcheck="true">// components/NotFound.js</span>
+<span class="token keyword">import</span> React from <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> NotFound <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span><span class="token number">404</span> page not found<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>We are sorry but the page you are looking <span class="token keyword">for</span> does not exist<span class="token punctuation">.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> NotFound<span class="token punctuation">;</span>
+</code></pre>
+<p>Let&apos;s add <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NotFound</span> <span class="token punctuation">/&gt;</span></span></code> component to routes configuration, using <code>*</code> as a value of the <code>path</code> parameter
+to get a non-greedy matching.</p>
+<p>It is important to remember that the 404 route <strong>needs to be declared
+in the very bottom of your routes configuration</strong>, so the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token punctuation">/&gt;</span></span></code> is only mounted if any of the
+routes&apos; path declared above are not matched:</p>
+<pre><code class="lang-jsx"><span class="token keyword">import</span> React from <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> render <span class="token punctuation">}</span> from <span class="token string">&apos;react-dom&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Router<span class="token punctuation">,</span> Route<span class="token punctuation">,</span> browserHistory <span class="token punctuation">}</span> from <span class="token string">&apos;react-router&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App from <span class="token string">&apos;./components/App&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> NotFound from <span class="token string">&apos;./components/NotFound&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Root <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Router</span> <span class="token attr-name">history</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>browserHistory<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>App<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+
+      <span class="token punctuation">{</span><span class="token comment" spellcheck="true">/* Your other routes here */</span><span class="token punctuation">}</span>
+
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>*<span class="token punctuation">&quot;</span></span> <span class="token attr-name">component</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>NotFound<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Route</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Router</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Root</span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;root&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>See the live example below, try to enter some non valid url to see 404 page:</p>
+<p><a href="https://jsfiddle.net/knowbody/35bve12w/" target="_blank">source code</a></p>
+
+                            
+                            </section>
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="NavigateOutsideComponents.html" class="navigation navigation-prev " aria-label="Previous page: Navigate Outside Components">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="DataFetching.html" class="navigation navigation-next " aria-label="Next page: Data Fetching (todo)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+</div>
+
+        
+    <script src="../gitbook/app.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-anker-enable/anker.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-jsfiddle/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+    <script>
+    require(["gitbook"], function(gitbook) {
+        gitbook.start({"edit-link":{"base":"https://github.com/knowbody/react-router-docs/tree/master/docs","label":""},"github":{"url":"https://github.com/knowbody/react-router-docs/tree/master/docs"},"jsfiddle":{"type":"frame","tabs":["result"],"height":"500","width":"100%"},"sharing":{"facebook":false,"twitter":false,"all":["facebook","twitter"],"google":false,"weibo":false,"instapaper":false,"vk":false},"prism":{},"theme-official":{},"anker-enable":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}}});
+    });
+    </script>
+
+    </body>
+</html>
