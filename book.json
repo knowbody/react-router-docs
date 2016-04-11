@@ -23,6 +23,13 @@
       "tabs": ["result"],
       "height": "500",
       "width": "100%"
+    },
+    "sharing": {
+      "facebook": false,
+      "twitter": false,
+      "all": [
+        "facebook", "twitter"
+      ]
     }
   }
 }
