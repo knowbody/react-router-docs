@@ -18,6 +18,7 @@
   * [Usage with Relay (todo)](/guides/UsageWithRelay.md)
   * [Usage with Flux (todo)](/guides/UsageWithFlux.md)
   * [Named Components (todo)](/guides/NamedComponents.md)
+  * [Route Transitions (todo)](/guides/RouteTransitions.md)
   * [Building an app with Router (todo)](/guides/ExampleApp.md)
 * [Histories (todo)](Histories.md)
 * [API Reference](/api/README.md)
