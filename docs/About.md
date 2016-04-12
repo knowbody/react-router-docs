@@ -24,3 +24,4 @@ React router doesnt handle data-fetching, you have to use [async-props](https://
 ### Alternatives
 
  - https://github.com/andreypopp/rrouter
+ - https://github.com/taion/rrtr
