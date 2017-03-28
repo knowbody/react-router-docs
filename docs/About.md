@@ -13,7 +13,7 @@ This offers many advantages:
  - Views transitions: automatic CSS transitions when navigating
  - Standardized app structure and behaviour, useful when working in a team
 
-By organising your code in such a standard way, it helps you keep a sane codebase, where your views are truly independant from the context.
+By organising your code in such a standard way, it helps you keep a sane codebase, where your views are truly independent from the context.
 
 You can find a few useful react-router [example apps](https://github.com/reactjs/react-router/tree/master/examples) on the official react-router repo.
 
