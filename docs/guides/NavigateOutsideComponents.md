@@ -8,7 +8,7 @@ React Router provides a few ways of accomplishing it.
 
 ## 1. Using `this.props.history`
 
-If you are trying to do it in the Route component (in short, *it's a component which is definied in your routes configuration*)
+If you are trying to do it in the Route component (in short, *it's a component which is defined in your routes configuration*)
 then you could take `history` object off of the `props` and then use `history`'s `push` method to
 navigate to the path you want.
 
