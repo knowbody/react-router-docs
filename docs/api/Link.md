@@ -5,7 +5,7 @@ A `<Link>` can know when the route it links to is active and automatically apply
 
 ## Props
 ### `to`
-A [location descriptor](https://github.com/mjackson/history/blob/master/docs/Glossary.md#locationdescriptor). Usually this is a string or an object, with the following semantics:
+A [location descriptor](https://github.com/ReactTraining/react-router/blob/v3/docs/Glossary.md#locationdescriptor). Usually this is a string or an object, with the following semantics:
 
 * If it's a string it represents the absolute path to link to, e.g. `/users/123` (relative paths are not supported).
 * If it's an object it can have four keys:
@@ -14,15 +14,15 @@ A [location descriptor](https://github.com/mjackson/history/blob/master/docs/Glo
   * `hash`: A hash to put in the URL, e.g. `#a-hash`.
   * `state`: State to persist to the `location`.
 
-### `query` **([Deprecated](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v2.0.0.md#link-to-onenter-and-isactive-use-location-descriptors) see `to`)**
+### `query` **([Deprecated](https://github.com/ReactTraining/react-router/blob/v3/upgrade-guides/v2.0.0.md#link-to-onenter-and-isactive-use-location-descriptors) see `to`)**
 An object of key:value pairs to be stringified.
 
-### `hash` **([Deprecated](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v2.0.0.md#link-to-onenter-and-isactive-use-location-descriptors) see `to`)**
+### `hash` **([Deprecated](https://github.com/ReactTraining/react-router/blob/v3/upgrade-guides/v2.0.0.md#link-to-onenter-and-isactive-use-location-descriptors) see `to`)**
 A hash to put in the URL, e.g. `#a-hash`.
 
 _Note: React Router currently does not manage scroll position, and will not scroll to the element corresponding to the hash. Scroll position management utilities are available in the [scroll-behavior](https://github.com/taion/scroll-behavior) library._
 
-### `state` **([Deprecated](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v2.0.0.md#link-to-onenter-and-isactive-use-location-descriptors) see `to`)**
+### `state` **([Deprecated](https://github.com/ReactTraining/react-router/blob/v3/upgrade-guides/v2.0.0.md#link-to-onenter-and-isactive-use-location-descriptors) see `to`)**
 State to persist to the `location`.
 
 ### `activeClassName`
